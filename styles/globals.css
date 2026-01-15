@@ -1,0 +1,98 @@
+/* Dark hacker theme */
+body {
+  background-color: #000;
+  color: #00ff00; /* Green text */
+  font-family: 'Courier New', monospace; /* Terminal font */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Button styles */
+.enter-button {
+  background-color: #000;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  border-radius: 50px;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: 'Courier New', monospace;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 0 20px #fff; /* White halo effect */
+  transition: all 0.3s ease;
+}
+
+.enter-button:hover {
+  box-shadow: 0 0 30px #fff;
+}
+
+/* Circling faded animation: A rotating ring around the button */
+.enter-button::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Faded white ring */
+  border-radius: 50px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Chatroom styles */
+.chat-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #111;
+  border: 1px solid #00ff00;
+  border-radius: 10px;
+}
+
+.messages {
+  height: 400px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background-color: #000;
+  padding: 10px;
+  border: 1px solid #00ff00;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 5px;
+  border-bottom: 1px solid #333;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #888;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input, button {
+  background-color: #000;
+  color: #00ff00;
+  border: 1px solid #00ff00;
+  padding: 10px;
+  font-family: 'Courier New', monospace;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ff00;
+  color: #000;
+}

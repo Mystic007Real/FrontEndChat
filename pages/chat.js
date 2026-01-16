@@ -51,7 +51,7 @@ export default function Chat() {
 
   return (
     <div className="chat-container">
-      <h2>Hacker Chatroom</h2>
+      <h2>FrontEnd Chat</h2>
       <div className="messages">
         {messages.map((msg) => (
           <div key={msg.id} className="message">
